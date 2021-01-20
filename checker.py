@@ -68,7 +68,7 @@ try:
                             pass
 
                         print(
-                            "\nPor Favor, Escreva o (FORM DATA) No Arquivo [form.txt]")
+                            "\nPor Favor, Escreva o (FORM DATA) No Arquivo [formToken.txt]")
                         esperar(7)
                         input("\n\n APOS ESCREVER O FORM, CLIQUE (ENTER)")
                         url = str(input("\n\n Url Do Alvo [POST] -> ")).strip()
@@ -76,7 +76,7 @@ try:
                             print("\n\n       Por Favor Insirá Algum Link!")
                             exit()
                         else:
-                            with open("./form.txt", "r", encoding="utf8") as formText:
+                            with open("./formToken.txt", "r", encoding="utf8") as formText:
                                 formm = formText.readlines()
 
                                 messageSuccess = str(
@@ -88,8 +88,7 @@ try:
                                     for line in lines.readlines():
 
                                         dado = line.split("|")
-                                        formc = formm.replace("dadoForm[0]", dado[0]).replace(
-                                            "dadoForm[1]", dado[1])
+                                        formc = formm.replace("dadoForm[0]", dado[0]).replace("dadoForm[1]", dado[1]).replace("TokenHere", TokenHere)
                                         form = json.loads(formc.replace(
                                             '\r\n', ''), strict=False)
 
