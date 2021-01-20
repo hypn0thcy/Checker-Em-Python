@@ -1,0 +1,5 @@
+{
+    "uname": "dadoForm[0]",
+    "token": "TokenHere",
+    "pass": "dadoForm[1]"
+}
